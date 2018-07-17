@@ -17,9 +17,9 @@ include("... ... /Authorisation.php");				//include the path to connection file
 if($flag)
 {
     
-	if($message=="/test")  
+	if($message=="/test")  								
 	{ 
-		file_get_contents($url."/sendmessage?chat_id=".$chatId."&text=This Bot is working Fine");
+		file_get_contents($url."/sendmessage?chat_id=".$chatId."&text=This Bot is working Fine");			// file_get_contents() is used to send messages to the user on Telegram
 	}
 	else if($message == "/hii")
 	{
@@ -60,12 +60,12 @@ if($flag)
 		
 		else
 		{
-			file_get_contents($url."/sendmessage?chat_id=".$chatId."&text=ERROR. RECORD NOT FOUND");
+			file_get_contents($url."/sendmessage?chat_id=".$chatId."&text=ERROR. RECORD NOT FOUND");		// If the record is not found, this messagw will be sent to the user
 		}
 	}
 	else
 	{
-		file_get_contents($url."/sendmessage?chat_id=".$chatId."&text=Please enter correct cpf");
+		file_get_contents($url."/sendmessage?chat_id=".$chatId."&text=Please enter correct cpf");			// In case of invalid input, this message will be sent to the user
 	}
 }
 
